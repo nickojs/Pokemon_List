@@ -1,0 +1,22 @@
+body {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+  }
+  .App {
+    font-family: sans-serif;
+  }
+  .App a {
+    color: rgb(0, 0, 0);
+  }
+  
+  input {
+    background-color: #ffffff;
+    border: 1px solid #db0000;
+    border-radius: 8px;
+    padding: 5px 10px;
+    color: rgb(0, 0, 0);
+  }
+  input:focus {
+    border-color: #db0000;
+    outline: none;
+  }
