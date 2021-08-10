@@ -24,27 +24,32 @@ import React, {
     if (!pokemon) {
       return null;
     }
-  
+    
     return (
 
      <div className="PokemonView">
           <h1>{pokemon.name}</h1>
-          <img
+          <div class="circle"><img
             src={pokemon.sprites.front_default}
-            alt={pokemon.name} />
+            alt={pokemon.name} /></div>
 
-          Type of Pokemon
-          <h1>{pokemon.types[0].type.name}</h1>
+          <h2>Type of Pokemon</h2>
+          <span>{pokemon.types[0].type.name}</span>
 
-          Evolutions
-          {/*<h1>{pokemon.APIResource[0].evolution_chain.name}</h1>*/}
+          <h3>Evolutions</h3>
 
           {/*<ul className="PokemonView__abilities">
-      {pokemon.abilities.map((item) => (
-        <li>{item.ability.name}</li>
-      ))}
-      </ul>*/}
-        </div>
+            {pokemon.abilities.map((item) => (
+            <li>{item.ability.name}</li>
+          ))}
+            </ul>*/}
+
+          <ul className="PokemonView__EvolutionChain">
+            {pokemon.EvolutionChain.map((chain) => (
+            <li>{chain.EvolutionChain.name}</li>
+          ))}
+            </ul>
+    </div>
     );
   };
   

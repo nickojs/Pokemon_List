@@ -11,6 +11,7 @@ import {
   Redirect
 } from 'react-router-dom';
 import './styles.css';
+import Pokeball from './css/pokeball.png';
 
 export default function App() {
 
@@ -19,7 +20,9 @@ export default function App() {
       <AppProvider>
         <Router>
           <h1>
-            <Link to="/pokemons/list">Pokemons List</Link>
+            {/*eslint-disable-next-line jsx-a11y/alt-text*/}
+            <img src={Pokeball}/>
+            <Link to="/pokemons/list">Pokemons List</Link>  
           </h1>
           <Switch>
             <Route path="/pokemons/list" component={List}

@@ -1,6 +1,7 @@
 .PokemonList {
     list-style: none;
     padding-left: 0;
+    
   }
   
   .PokemonList li {
@@ -10,7 +11,7 @@
   .PokemonList li a {
     text-decoration: none;
     color: #000000;
-    border: 1px solid #00000017;
+    border: 1px solid #4b424217;
     display: flex;
     justify-content: space-between;
     padding: 10px;

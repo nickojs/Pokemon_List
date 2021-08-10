@@ -1,14 +1,45 @@
 .PokemonView {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+
+
   }
   .PokemonView h1 {
     font-weight: 300;
-    font-size: 24px;
+    font-size: 33px; /*bulbasaur and grass*/
+  }
+
+  .PokemonView h2 {
+    margin-top: 150px;
+    font-weight: 300;
+    font-size: 24px; /*bulbasaur and grass*/
+  }
+
+  .PokemonView h3 {
+    margin-top: 30px;
+    font-weight: 300;
+    font-size: 24px; /*bulbasaur and grass*/
+  }
+
+  .PokemonView span {
+    font-weight: 300;
+    font-size: 24px; /*bulbasaur and grass*/
+  }
+
+  .circle {
+    width: 140px;
+    height: 140px;
+    background: red; 
+    -moz-border-radius: 70px; 
+    -webkit-border-radius: 70px; 
+    border-radius: 70px;
   }
   
   .PokemonView img {
-    width: 200px;
+    width: 300px;
   }
   
   .PokemonView__abilities {
