@@ -22,7 +22,7 @@ export default function App() {
           <h1>
             {/*eslint-disable-next-line jsx-a11y/alt-text*/}
             <img src={Pokeball}/>
-            <Link to="/pokemons/list">Pokemons List</Link>  
+            <Link style={{ textDecoration: 'none'}} to="/pokemons/list">Pokemons List</Link>
           </h1>
           <Switch>
             <Route path="/pokemons/list" component={List}

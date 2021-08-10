@@ -1,6 +1,11 @@
 .PokemonList {
-    list-style: none;
-    padding-left: 0;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: center;
+	justify-content: center;
+	align-items: center;
+  width: 100%;
+
     
   }
   

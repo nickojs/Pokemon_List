@@ -31,24 +31,24 @@ import React, {
           <h1>{pokemon.name}</h1>
           <div class="circle"><img
             src={pokemon.sprites.front_default}
-            alt={pokemon.name} /></div>
+            alt={pokemon.name}/></div>
 
           <h2>Type of Pokemon</h2>
           <span>{pokemon.types[0].type.name}</span>
 
           <h3>Evolutions</h3>
-
+        
           {/*<ul className="PokemonView__abilities">
             {pokemon.abilities.map((item) => (
             <li>{item.ability.name}</li>
           ))}
             </ul>*/}
 
-          <ul className="PokemonView__EvolutionChain">
+          {/*<ul className="PokemonView__EvolutionChain">
             {pokemon.EvolutionChain.map((chain) => (
             <li>{chain.EvolutionChain.name}</li>
           ))}
-            </ul>
+            </ul>*/}
     </div>
     );
   };

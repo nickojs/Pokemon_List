@@ -15,7 +15,7 @@ const PokemonList = () => {
         );
 
   useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
+    fetch(`https://pokeapi.co/api/v2/pokemon?limit=151`)
       .then((r) => r.json())
       .then((json) => {
         setPokemons(json.results);
@@ -33,6 +33,7 @@ const PokemonList = () => {
         value={search}
         onChange={(ev) => setSearch(ev.target.value)}
       />
+
       {filtered && (
         <ul className="PokemonsList">
           {filtered.map(({ name }) => (
