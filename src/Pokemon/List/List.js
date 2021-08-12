@@ -41,6 +41,12 @@ const PokemonList = () => {
           ))}
         </ul>
       )}
+
+      {/*<div className="Pokemonimage">
+        <img
+          src={pokemons.sprites.front_default}
+          alt={pokemons.name}/>
+          </div>*/}
     </>
   );
 };

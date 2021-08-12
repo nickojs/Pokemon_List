@@ -6,6 +6,7 @@ import React, {
   import { useParams } from 'react-router-dom';
   import AppContext from '../../AppContext/Context';
   import './View.css';
+  //import Evolutions from '../Evolutions/Evolutions';
   
   const PokemonView = () => {
     const { setToPokelist } = useContext(AppContext);
@@ -26,7 +27,6 @@ import React, {
     }
     
     return (
-
      <div className="PokemonView">
           <h1>{pokemon.name}</h1>
           <div class="circle"><img
@@ -36,7 +36,7 @@ import React, {
           <h2>Type of Pokemon</h2>
           <span>{pokemon.types[0].type.name}</span>
 
-          <h3>Evolutions</h3>
+          {/*<h3>Evolutions</h3>*/}
         
           {/*<ul className="PokemonView__abilities">
             {pokemon.abilities.map((item) => (

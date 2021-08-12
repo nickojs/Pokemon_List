@@ -10,6 +10,7 @@
   .PokemonView h1 {
     font-weight: 300;
     font-size: 33px;
+    font-style: bold;
   }
 
   .PokemonView h2 {

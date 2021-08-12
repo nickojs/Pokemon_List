@@ -2,6 +2,7 @@ import React from 'react';
 import List from './Pokemon/List/List';
 import View from './Pokemon/View/View';
 import AppProvider from './AppContext/Provider';
+//import Evolutions from './Pokemon/Evolutions/Evolutions';
 
 import {
   BrowserRouter as Router,
@@ -12,9 +13,10 @@ import {
 } from 'react-router-dom';
 import './styles.css';
 import Pokeball from './css/pokeball.png';
+//import Background from './css/background.png';
+//<img src={Background}/>
 
 export default function App() {
-
   return (
     <div className="App">
       <AppProvider>
@@ -27,13 +29,13 @@ export default function App() {
           <Switch>
             <Route path="/pokemons/list" component={List}
             />
-            <Route
-              path="/pokemons/:name"
-              component={View}
+            <Route path="/pokemons/:name" component={View}
             />
+            {/*<Route path="/pokemons/:name" component={Evolutions}
+            />*/}
             <Route path="/" exact>
               <Redirect to="/pokemons/list" />
-            </Route>
+            </Route >
           </Switch>
         </Router>
       </AppProvider>
