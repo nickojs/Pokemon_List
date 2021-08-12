@@ -1,7 +1,7 @@
 import React from 'react';
 import List from './Pokemon/List/List';
 import View from './Pokemon/View/View';
-import AppProvider from './AppContext/Provider';
+import { AppProvider } from './AppContext/Provider';
 //import Evolutions from './Pokemon/Evolutions/Evolutions';
 
 import {

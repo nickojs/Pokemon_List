@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const PokemonAnimal = ({ name }) => {
-  
+
   if (name.startsWith('bul')) {
     console.log('render');
   }

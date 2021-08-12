@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../Card/Card';
+import { usePokemon } from '../../AppContext/Provider'
 import './List.css';
 
 const PokemonList = () => {
   const [search, setSearch] = useState('');
-  const [pokemons, setPokemons] = useState(null);
+  const { pokemons, pokemonListHandler } = usePokemon();
 
   const s = search && search.toLowerCase();
   const filtered =
@@ -18,13 +19,9 @@ const PokemonList = () => {
     fetch(`https://pokeapi.co/api/v2/pokemon?limit=151`)
       .then((r) => r.json())
       .then((json) => {
-        setPokemons(json.results);
+        pokemonListHandler(json.results);
       });
   }, []);
-
-  if (!pokemons) {
-    return null;
-  }
 
   return (
     <>

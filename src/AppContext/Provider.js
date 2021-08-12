@@ -1,28 +1,32 @@
-import React, { useState, useCallback } from 'react';
-import AppContext from './Context';
+import React, { useState, useContext } from 'react';
 
-const defaultUser = {
-  pokelist: {}
-};
+const AppContext = React.createContext({
+  pokemons: [],
+  selectedPokemon: null,
+})
 
-const AppProvider = ({ children }) => {
-  const [user, setUser] = useState(defaultUser);
-
-  const setToPokelist = useCallback((pokemon) => {
-    setUser((currentUser) => ({
-      ...currentUser,
-      pokelist: {
-        ...currentUser.pokelist,
-        [pokemon.name]: pokemon
-      }
-    }));
-  }, []);
+export const AppProvider = ({ children }) => {
+  const [pokemons, setPokemons] = useState([]);
+  const [selectedPokemon, setSelectedPokemon] = useState(null);
+  
+  const pokemonListHandler = (pokemonsList) => setPokemons(pokemonsList);
+  const pokemonSelectHandler = (name) => setSelectedPokemon(name);
 
   return (
-    <AppContext.Provider value={{ user, setToPokelist }}>
+    <AppContext.Provider 
+      value={{ 
+        pokemons, 
+        selectedPokemon, 
+        pokemonListHandler, 
+        pokemonSelectHandler 
+      }}
+    >
       {children}
     </AppContext.Provider>
   );
 };
 
-export default AppProvider;
+export const usePokemon = () => { 
+  const context = useContext(AppContext);
+  return context;
+}
